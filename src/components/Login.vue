@@ -28,6 +28,13 @@ export default {
   },
   methods: {
     login() {
+      /*
+      測試用
+      localStorage.setItem('token', 'tokentokentokentoken');
+      this.getInfo();
+      this.$router.push('/url-list');*/
+
+
       if(this.account === ''){
         this.accountError = true;
         return false;

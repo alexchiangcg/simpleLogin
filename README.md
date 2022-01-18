@@ -1,5 +1,4 @@
-# original-company-api-client
-### 給遊戲原廠輸入的api網站
+### Admin
 
 ## Project setup
 ```

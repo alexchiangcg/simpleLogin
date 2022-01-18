@@ -4,8 +4,8 @@
     <table>
       <thead>
       <tr class="title">
-        <th>遊戲名稱</th>
-        <th>分服接口</th>
+        <th>帳號名稱</th>
+        <th>ip 白名單</th>
         <th>角色接口</th>
         <th>補單接口</th>
         <th>編輯</th>
@@ -15,11 +15,11 @@
       <tr class="item" v-for="item of list" :key="item.game_id">
         <td class="content">
           <span
-              class="mobile-gameName">遊戲名稱</span>
+              class="mobile-gameName">帳號名稱</span>
           {{ item.game_name }}
         </td>
         <td class="content">
-          <span class="mobile-gameName">分服接口</span>
+          <span class="mobile-gameName">ip 白名單ip</span>
           <span class="url" v-show="!item.show">{{ item.server_url }}</span>
           <input type="text" v-show="item.show" v-model="serverUrl">
         </td>
