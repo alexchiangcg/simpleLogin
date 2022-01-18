@@ -49,24 +49,28 @@ export default {
         this.accountError = false;
       }
 
-      this.$apiService.login(this.account, this.password).then((res) => {
-        if (this.$store.state.showLog) {
-          console.log(res);
-        }
-        alert('登入成功');
-        localStorage.setItem('token', res.token);
-        this.getInfo();
+      // this.$apiService.login(this.account, this.password).then((res) => {
+      //   if (this.$store.state.showLog) {
+      //     console.log(res);
+      //   }
+      //   alert('登入成功');
+      //   localStorage.setItem('token', res.token);
+      //   this.getInfo();
+      //   this.$router.push('/url-list');
+      //
+      // }).catch((err) => {
+      //   if (this.$store.state.showLog) {
+      //     console.log(err);
+      //   }
+      //
+      //   // 錯誤提醒
+      //   alert(errorCode[err.error_code]);
+      //
+      // })
+
+        /// 跳轉
+        localStorage.setItem('token', 'test');
         this.$router.push('/url-list');
-
-      }).catch((err) => {
-        if (this.$store.state.showLog) {
-          console.log(err);
-        }
-
-        // 錯誤提醒
-        alert(errorCode[err.error_code]);
-
-      })
     },
     getInfo(){
       this.$apiService.getInfo().then((res) => {
